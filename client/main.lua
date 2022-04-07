@@ -29,7 +29,6 @@ end)
 
 function draw3DText(pos, text, options)
     options = options or {}
-    local color = options.color or { r = 255, g = 255, b = 255, a = 255 }
     local scaleOption = options.size or 0.8
 
     local camCoords = GetGameplayCamCoords()
@@ -40,7 +39,6 @@ function draw3DText(pos, text, options)
     SetDrawOrigin(pos.x, pos.y, pos.z, 0);
     SetTextProportional(0)
     SetTextScale(0.0 * scaleMultiplier, 0.55 * scaleMultiplier)
-    SetTextColour(color.r, color.g, color.b, color.a)
     SetTextDropshadow(0, 0, 0, 0, 255)
     SetTextEdge(2, 0, 0, 0, 150)
     SetTextDropShadow()
